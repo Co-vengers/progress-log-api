@@ -71,11 +71,20 @@ app = FastAPI(
 # --- CORS Middleware ---
 # This allows the React frontend (running on a different port) to communicate with the API.
 
-# IMPORTANT: Replace this with your actual Vercel frontend URL
-# Example: "https://my-progress-log-client.vercel.app"
-# Do NOT include a trailing slash "/"
+# ----------------- ### CRITICAL STEP ### -----------------
+# You MUST replace the placeholder URL below with your actual, live Vercel frontend URL.
+# Find your Vercel URL from your Vercel dashboard.
+#
+# EXAMPLE: If your Vercel app is at "https://my-log-app-123.vercel.app",
+# your `origins` list should look like this:
+#
+# origins = [
+#     "https://my-log-app-123.vercel.app",
+#     "http://localhost:3000",
+# ]
+# ---------------------------------------------------------
 origins = [
-    "https://my-progress-log-qwsh.vercel.app/", # ### <--- REPLACE THIS LINE ###
+    "https://my-progress-log-qwsh.vercel.app", # ### <--- REPLACE THIS LINE WITH YOUR VERCEL URL ###
     "http://localhost:3000", # Keep for local development
 ]
 
