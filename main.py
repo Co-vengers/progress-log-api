@@ -70,12 +70,22 @@ app = FastAPI(
 
 # --- CORS Middleware ---
 # This allows the React frontend (running on a different port) to communicate with the API.
+
+# IMPORTANT: Replace this with your actual Vercel frontend URL
+# Example: "https://my-progress-log-client.vercel.app"
+# Do NOT include a trailing slash "/"
+origins = [
+    "https://my-progress-log-qwsh.vercel.app/", # ### <--- REPLACE THIS LINE ###
+    "http://localhost:3000", # Keep for local development
+]
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://my-progress-log-qwsh.vercel.app/"],  # In production, restrict this to your frontend's domain
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"], # Allows all methods
+    allow_headers=["*"], # Allows all headers
 )
 
 # --- Dependency to get and verify user ID from Firebase Auth token ---
