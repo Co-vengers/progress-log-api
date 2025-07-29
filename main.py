@@ -72,7 +72,7 @@ app = FastAPI(
 # This allows the React frontend (running on a different port) to communicate with the API.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, restrict this to your frontend's domain
+    allow_origins=["https://my-progress-log-qwsh.vercel.app/"],  # In production, restrict this to your frontend's domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
