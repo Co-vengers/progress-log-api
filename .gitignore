@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+.env
+.venv/
+venv/
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Firebase/Secrets
+serviceAccountKey.json
+backend/serviceAccountKey.json
+FIREBASE_CREDENTIALS.json
+
+# Logs
+*.log
+
+# Build
+build/
+dist/
+
+# Misc
+*.sqlite3
+*.db
+
+# Ignore test coverage
+htmlcov/
+.coverage
+coverage.xml
+
+# Ignore local config
+.env.*
+
+# Ignore frontend build
+my-progress-log/build/
